@@ -1,6 +1,6 @@
 # API de Catálogo em ASP.NET Core 8
 
-![.NET](https://img.shields.io/badge/.NET-8-512BD4?style=for-the-badge&logo=dotnet&logoColor=white)
+![.NET](https://img.shields.io/badge/.NET-8-512BD4?style=for-the-badge&logo=.net&logoColor=white)
 ![ASP.NET Core](https://img.shields.io/badge/ASP.NET_Core-8-512BD4?style=for-the-badge&logo=.net&logoColor=white)
 ![C#](https://img.shields.io/badge/C%23-12-239120?style=for-the-badge&logo=c-sharp&logoColor=white)
 ![Entity Framework](https://img.shields.io/badge/Entity_Framework-8-4E257C?style=for-the-badge&logo=entity-framework&logoColor=white)
@@ -32,7 +32,7 @@ API RESTful completa para gerenciamento de produtos e categorias, construída co
 * **Linguagem:** C# 12
 * **Arquitetura da API:** ASP.NET Core 8
 * **Acesso a Dados:** Entity Framework Core 8
-* **Testes:** xUnit
+* **Testes (Desenvolvimento):** xUnit
 * **Validação:** FluentValidation
 * **Banco de Dados (Desenvolvimento):** Provedor In-Memory do EF Core
 * **Documentação:** Swagger (OpenAPI)
