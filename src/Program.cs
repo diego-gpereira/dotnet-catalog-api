@@ -9,13 +9,16 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 
 builder.Services.AddFluentValidationAutoValidation();
+
+// sempre que uma requisição HTTP chegar, antes de executar o código do meu controller, 
+// execute automaticamente o validador correspondente (ex: ProdutoValidator)
 builder.Services.AddValidatorsFromAssemblyContaining<Program>();
 
 // Configura o Entity Framework para usar um banco de dados em memória.
 builder.Services.AddDbContext<CatalogoContext>(options =>
     options.UseInMemoryDatabase("CatalogoDB"));
 
-// Registra os serviços necessários para o Swagger gerar a documentação da API.
+// registra os serviços para o Swagger gerar a documentação da API.
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 

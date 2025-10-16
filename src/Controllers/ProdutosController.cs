@@ -15,6 +15,11 @@ namespace CatalogoApi.Controllers
       [HttpPost]
       public async Task<ActionResult<Produto>> PostProduto([FromBody] Produto novoProduto)
       {
+         if (!ModelState.IsValid)
+         {
+            return BadRequest(ModelState);
+         }
+
          novoProduto.DataCadastro = DateTime.Now;
 
          _context.Produtos.Add(novoProduto);
@@ -28,11 +33,9 @@ namespace CatalogoApi.Controllers
       [HttpGet]
       public async Task<ActionResult<IEnumerable<Produto>>> GetProdutos()
       {
-         // .ToListAsync() nunca retorna nulo, apenas uma lista vazia.
-         // portanto a verificação if (produtos == null) não é necessária.
          var produtos = await _context.Produtos.ToListAsync();
 
-         if (!produtos.Any())
+         if (produtos.Count == 0)
          {
             return NotFound("Nenhum produto encontrado.");
          }
@@ -44,7 +47,6 @@ namespace CatalogoApi.Controllers
       [HttpGet("{id}")]
       public async Task<ActionResult<Produto>> GetProdutoPorId(int id)
       {
-         // .FindAsync() que é a forma otimizada de buscar um item pela chave primária.
          var produto = await _context.Produtos.FindAsync(id);
 
          if (produto == null)
@@ -64,7 +66,6 @@ namespace CatalogoApi.Controllers
             return BadRequest("IDs inconsistentes.");
          }
 
-         // Procura o produto existente no banco de dados.
          var produtoExistente = await _context.Produtos.FindAsync(id);
 
          if (produtoExistente == null)
@@ -72,7 +73,7 @@ namespace CatalogoApi.Controllers
             return NotFound("Produto não encontrado para atualização.");
          }
 
-         // Atualiza as propriedades do produto que o EF está observando
+         // atualiza as propriedades do produto que o EF está observando
          produtoExistente.Nome = produtoAtualizado.Nome;
          produtoExistente.Descricao = produtoAtualizado.Descricao;
          produtoExistente.Preco = produtoAtualizado.Preco;
@@ -87,7 +88,6 @@ namespace CatalogoApi.Controllers
       [HttpDelete("{id}")]
       public async Task<ActionResult> DeleteProduto(int id)
       {
-         // Procura o produto a ser deletado no banco.
          var produtoParaDeletar = await _context.Produtos.FindAsync(id);
 
          if (produtoParaDeletar == null)

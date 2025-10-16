@@ -61,6 +61,5 @@ Desenvolvida com **.NET 8** e **C# 12**, a API segue os princípios de arquitetu
 
 ### 🗺️ Roadmap (Próximos Passos)
 
-* [ ] Expansão da cobertura de testes unitários.
 * [ ] Migração do provedor de dados de In-Memory para SQL Server.
 * [ ] Implementação de autenticação e autorização com JWT.

@@ -13,7 +13,7 @@ namespace CatalogoApi.Models
         [MaxLength(100)]
         public required string Nome { get; set; }
 
-        [JsonIgnore] // Ignora esta propriedade ao serializar para evitar loops infinitos
+        [JsonIgnore] // Ignora esta propriedade ao serializar para evitar loops infinitos => os produtos retornam o Json Categoria
         public ICollection<Produto>? Produtos { get; set; } // uma categoria pode ter uma coleção de produtos.
     }
 }
