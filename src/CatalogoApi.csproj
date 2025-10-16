@@ -7,6 +7,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove=".\CatalogApi.Tests\**" />
+    <EmbeddedResource Remove=".\CatalogApi.Tests\**" />
+    <None Remove=".\CatalogApi.Tests\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="FluentValidation.AspNetCore" Version="11.3.1" />
     <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="8.0.20" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="9.0.9" />
