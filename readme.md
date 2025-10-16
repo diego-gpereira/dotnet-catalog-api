@@ -1,12 +1,14 @@
 # API de Catálogo em ASP.NET Core 8
 
-![.NET](https://img.shields.io/badge/.NET-8-512BD4?style=for-the-badge&logo=dotnet&logoColor=white)
+![.NET](https://img.shields.io/badge/.NET-8-512BD4?style=for-the-badge&logo=.net&logoColor=white)
 ![ASP.NET Core](https://img.shields.io/badge/ASP.NET_Core-8-512BD4?style=for-the-badge&logo=.net&logoColor=white)
 ![C#](https://img.shields.io/badge/C%23-12-239120?style=for-the-badge&logo=c-sharp&logoColor=white)
 ![Entity Framework](https://img.shields.io/badge/Entity_Framework-8-4E257C?style=for-the-badge&logo=entity-framework&logoColor=white)
 ![xUnit](https://img.shields.io/badge/xUnit-Testes-blue?style=for-the-badge&logo=xunit&logoColor=white)
 
-API RESTful completa para gerenciamento de produtos e categorias, construída com as práticas mais recentes do ecossistema .NET. O objetivo é demonstrar a criação de um back-end robusto, testável e bem-estruturado.
+Este projeto é uma API RESTful completa para gerenciamento de produtos e categorias, construída com as práticas mais recentes do ecossistema .NET. O objetivo é demonstrar a criação de um back-end robusto, testável e bem-estruturado.
+
+Desenvolvida com **.NET 8** e **C# 12**, a API segue os princípios de arquitetura limpa, separando as responsabilidades em diferentes camadas para facilitar a manutenção e a escalabilidade. O acesso a dados é gerenciado pelo **Entity Framework Core 8**, e a qualidade do código é assegurada por uma suíte de **testes unitários** com xUnit.
 
 ---
 
@@ -47,7 +49,7 @@ API RESTful completa para gerenciamento de produtos e categorias, construída co
     ```
 2.  Navegue até a pasta do projeto:
     ```bash
-    cd dotnet-catalog--api
+    cd dotnet-catalog-api
     ```
 3.  Execute a aplicação:
     ```bash
