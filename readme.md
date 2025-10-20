@@ -23,7 +23,7 @@ Desenvolvida com **.NET 8** e **C# 12**, a API segue os princípios de arquitetu
 * **Acesso a Dados com EF Core:** Utilização do principal ORM do mercado .NET para mapeamento objeto-relacional.
 * **Validação de Dados (FluentValidation):** Regras de validação robustas para garantir a integridade dos dados.
 * **Testes Unitários (xUnit):** Cobertura de testes para as regras de negócio, assegurando a qualidade e prevenindo regressões.
-* **Estrutura Organizada:** Código desacoplado em camadas (Controllers, Services, Repositories).
+* **Estrutura Organizada:** Código com clara separação de responsabilidades (Controllers, Data, Models).
 * **Documentação com Swagger:** Geração automática de uma documentação interativa da API.
 
 ---
@@ -45,17 +45,21 @@ Desenvolvida com **.NET 8** e **C# 12**, a API segue os princípios de arquitetu
 
 1.  Clone o repositório:
     ```bash
-    git clone [https://github.com/diego-gpereira/dotnet-catalog-api.git](https://github.com/diego-gpereira/dotnet-catalog-api.git)
+    git clone https://github.com/diego-gpereira/dotnet-catalog-api.git
     ```
 2.  Navegue até a pasta do projeto:
     ```bash
     cd dotnet-catalog-api
     ```
-3.  Execute a aplicação:
+3.  Restaure as dependências do projeto:
     ```bash
-    dotnet run
+    dotnet restore
     ```
-4.  Acesse a documentação do Swagger em `https://localhost:7199/swagger` (ou a porta indicada no terminal).
+4.  Execute a aplicação:
+    ```bash
+    dotnet run --project src/CatalogoApi.csproj
+    ```
+5.  Acesse a documentação do Swagger em `https://localhost:7199/swagger` (ou a porta indicada no terminal).
 
 ---
 
